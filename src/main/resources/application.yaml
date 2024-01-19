@@ -12,6 +12,6 @@ spring:
       ddl-auto: update
     show-sql: true
   liquibase:
-    change-log: classpath:/liquibase/db-changelog.xml  # Update with your Liquibase change log file location
+    change-log: classpath:db/db-changelog.xml  # Update with your Liquibase change log file location
 
 

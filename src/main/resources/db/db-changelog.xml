@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Include SQL scripts -->
+    <include file="classpath:db/V1__cities.sql"/>
+    <include file="classpath:db/V2__subscriptions.sql"/>
+    <include file="classpath:db/V3__users.sql"/>
+    <include file="classpath:db/V4__weather_data.sql"/>
+
+    <!-- Include corresponding undo scripts -->
+    <include file="classpath:db/U1__cities.sql"/>
+    <include file="classpath:db/U2__subscriptions.sql"/>
+    <include file="classpath:db/U3__users.sql"/>
+    <include file="classpath:db/U4__weather_data.sql"/>
+
+</databaseChangeLog>
