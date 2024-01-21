@@ -1,4 +1,4 @@
-CREATE TABLE subscriptions (
+CREATE TABLE IF NOT EXISTS "subscriptions" (
                                id BIGSERIAL PRIMARY KEY,
                                user_id BIGINT NOT NULL,
                                city_id BIGINT NOT NULL,

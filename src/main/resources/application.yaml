@@ -1,17 +1,19 @@
 server:
   port: 8080
 
+jwt:
+  master-key: 2c3abca2-48ec-4bf5-8ea7-23a8a6e205d3
+  secret-key: 576E5A7234753778214125442A472D4B614E645267556B58703273357638792F423F4528482B4D6251655468566D597133743677397A24432646294A404E6352
+  expirationMs: 3600000 # 1 hour
+
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/weather_db
-    username: your_db_username
-    password: your_db_password
-    driver-class-name: org.postgresql.Driver
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+  main:
+    allow-circular-references: true
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/mydatabase
+    username: myuser
+    password: mypassword
+    initialization-mode: always  # Change to 'never' for production
   liquibase:
-    change-log: classpath:db/db-changelog.xml  # Update with your Liquibase change log file location
-
-
+    change-log: classpath:db/db-changelog.xml
+    enabled: true

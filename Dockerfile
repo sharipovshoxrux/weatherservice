@@ -1,7 +1,8 @@
-FROM adoptopenjdk:11-jre-hotspot
+FROM openjdk:11-jre-slim
 
 WORKDIR /app
-COPY target/weatherservice.jar weatherservice.jar
+
+COPY target/weatherservice.jar /app
 
 EXPOSE 8080
 

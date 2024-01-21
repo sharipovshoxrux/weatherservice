@@ -1,4 +1,4 @@
-CREATE TABLE weather_data (
+CREATE TABLE IF NOT EXISTS "weather_data" (
                               id BIGSERIAL PRIMARY KEY,
                               city_id BIGINT NOT NULL,
                               temperature DOUBLE NOT NULL,

@@ -4,13 +4,13 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <!-- Include SQL scripts -->
+    <!-- Including SQL scripts -->
     <include file="classpath:db/V1__cities.sql"/>
     <include file="classpath:db/V2__subscriptions.sql"/>
     <include file="classpath:db/V3__users.sql"/>
     <include file="classpath:db/V4__weather_data.sql"/>
 
-    <!-- Include corresponding undo scripts -->
+    <!-- Including corresponding undo scripts -->
     <include file="classpath:db/U1__cities.sql"/>
     <include file="classpath:db/U2__subscriptions.sql"/>
     <include file="classpath:db/U3__users.sql"/>

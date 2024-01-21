@@ -4,10 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66375eda-b1de-4250-998a-953347ead306" name="Changes" comment="init">
+    <list default="true" id="66375eda-b1de-4250-998a-953347ead306" name="Changes" comment="developing">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/domain/entity/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/domain/entity/Subscription.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/domain/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/domain/entity/WeatherData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/controller/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/controller/admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/controller/client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/controller/client/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/domain/City.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/domain/Subscription.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/domain/WeatherData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/domain/dto/CityDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/domain/dto/response/city/CityResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/domain/dto/SubscriptionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/domain/dto/request/subscription/SubscriptionRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/domain/dto/UserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/domain/dto/WeatherDataDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/domain/dto/response/weatherdata/WeatherDataResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/repository/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/repository/CityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/repository/SubscriptionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/repository/SubscriptionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/repository/WeatherDataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/repository/WeatherDataRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/service/JwtTokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/service/admin/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/service/admin/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/service/admin/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/service/admin/AdminServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/service/client/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/service/client/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/weather/service/client/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/weather/service/client/ClientServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/V1__cities.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/V1__cities.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/V2__subscriptions.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/V2__subscriptions.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/V3__users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/V3__users.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/V4__weather_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/V4__weather_data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/db-changelog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/db-changelog.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,22 +72,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.WeatherServiceImplTest.executor": "Run",
+    "Maven.weatherservice [clean].executor": "Run",
+    "Maven.weatherservice [package].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.WeatherServiceApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.4075437",
+    "settings.editor.selected.configurable": "build.tools",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.WeatherServiceApplication">
+    <configuration name="WeatherServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="weatherservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="uz.example.weatherservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="uz.example.weatherservice.service" />
+      <option name="MAIN_CLASS_NAME" value="uz.example.weatherservice.service.WeatherServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WeatherServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="weatherservice" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.weather.WeatherServiceApplication" />
@@ -62,6 +122,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.WeatherServiceImplTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-11.0.22-corretto-11.0.22-f644763e9732-6ddbcd97" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -73,6 +145,11 @@
       <updated>1705508544770</updated>
       <workItem from="1705508545854" duration="8511000" />
       <workItem from="1705552624896" duration="4570000" />
+      <workItem from="1705683609996" duration="236000" />
+      <workItem from="1705684158288" duration="3122000" />
+      <workItem from="1705687571469" duration="313000" />
+      <workItem from="1705687925394" duration="31000" />
+      <workItem from="1705687962327" duration="38952000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -90,6 +167,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="developing" />
+    <option name="LAST_COMMIT_MESSAGE" value="developing" />
   </component>
 </project>

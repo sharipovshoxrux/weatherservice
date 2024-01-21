@@ -1,9 +1,9 @@
 package org.example.weather.service.admin;
 
-import org.example.weather.domain.City;
-import org.example.weather.domain.Subscription;
-import org.example.weather.domain.User;
-import org.example.weather.domain.WeatherData;
+import org.example.weather.domain.entity.City;
+import org.example.weather.domain.entity.Subscription;
+import org.example.weather.domain.entity.User;
+import org.example.weather.domain.entity.WeatherData;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

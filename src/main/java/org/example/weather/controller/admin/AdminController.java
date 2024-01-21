@@ -1,30 +1,29 @@
 package org.example.weather.controller.admin;
 
 
-
-import org.example.weather.domain.City;
-import org.example.weather.domain.Subscription;
-import org.example.weather.domain.User;
-import org.example.weather.domain.WeatherData;
+import lombok.RequiredArgsConstructor;
+import org.example.weather.domain.entity.City;
+import org.example.weather.domain.entity.Subscription;
+import org.example.weather.domain.entity.User;
+import org.example.weather.domain.entity.WeatherData;
 import org.example.weather.service.admin.AdminService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/api/v1/admin")
+@RequiredArgsConstructor
 public class AdminController {
 
     private final AdminService adminService;
 
-    @Autowired
-    public AdminController(AdminService adminService) {
-        this.adminService = adminService;
-    }
-
-    // Get a list of all users
     @GetMapping("/user-list")
     public Flux<User> getUserList() {
         return adminService.getUserList();

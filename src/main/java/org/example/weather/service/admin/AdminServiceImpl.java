@@ -1,36 +1,28 @@
 package org.example.weather.service.admin;
 
-import org.example.weather.domain.City;
-import org.example.weather.domain.Subscription;
-import org.example.weather.domain.User;
-import org.example.weather.domain.WeatherData;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.example.weather.domain.entity.City;
+import org.example.weather.domain.entity.Subscription;
+import org.example.weather.domain.entity.User;
+import org.example.weather.domain.entity.WeatherData;
 import org.example.weather.repository.CityRepository;
 import org.example.weather.repository.SubscriptionRepository;
 import org.example.weather.repository.UserRepository;
 import org.example.weather.repository.WeatherDataRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@Slf4j
 @Service
+@RequiredArgsConstructor
 public class AdminServiceImpl implements AdminService {
 
     private final UserRepository userRepository;
     private final CityRepository cityRepository;
     private final SubscriptionRepository subscriptionRepository;
     private final WeatherDataRepository weatherDataRepository;
-
-    @Autowired
-    public AdminServiceImpl(UserRepository userRepository,
-                            CityRepository cityRepository,
-                            SubscriptionRepository subscriptionRepository,
-                            WeatherDataRepository weatherDataRepository) {
-        this.userRepository = userRepository;
-        this.cityRepository = cityRepository;
-        this.subscriptionRepository = subscriptionRepository;
-        this.weatherDataRepository = weatherDataRepository;
-    }
 
     @Override
     public Flux<User> getUserList() {
@@ -48,7 +40,6 @@ public class AdminServiceImpl implements AdminService {
                 .flatMap(existingUser -> {
                     existingUser.setUsername(updatedUser.getUsername());
                     existingUser.setPassword(updatedUser.getPassword());
-                    // Update other user fields as needed
                     return userRepository.save(existingUser);
                 });
     }
@@ -64,7 +55,6 @@ public class AdminServiceImpl implements AdminService {
                 .flatMap(existingCity -> {
                     existingCity.setName(updatedCity.getName());
                     existingCity.setCountry(updatedCity.getCountry());
-                    // Update other city fields as needed
                     return cityRepository.save(existingCity);
                 });
     }
@@ -74,7 +64,6 @@ public class AdminServiceImpl implements AdminService {
         return weatherDataRepository.findById(cityId)
                 .flatMap(existingData -> {
                     existingData.setTemperature(updatedWeatherData.getTemperature());
-                    // Update other weather data fields as needed
                     return weatherDataRepository.save(existingData);
                 });
     }
