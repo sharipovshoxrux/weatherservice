@@ -4,8 +4,8 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
+import org.example.weather.controller.BaseController;
 import org.example.weather.domain.dto.request.auth.LoginRequestDTO;
 import org.example.weather.domain.dto.request.subscription.SubscriptionRequestDTO;
 import org.example.weather.domain.dto.response.auth.AuthenticationResponseDTO;
@@ -31,7 +31,7 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("/api/v1/client")
 @RequiredArgsConstructor
-public class ClientController {
+public class ClientController extends BaseController {
 
     private final ClientService clientService;
     private final AuthenticationService authService;
@@ -58,7 +58,6 @@ public class ClientController {
 
     @GetMapping(path = "/cities-list", produces = {MediaType.APPLICATION_JSON_VALUE})
     @Operation(summary = "List of cities",
-            security = {@SecurityRequirement(name = "bearer-key")},
             responses = {
                     @ApiResponse(responseCode = "200",
                             description = "Successful operation",
@@ -69,7 +68,7 @@ public class ClientController {
     }
 
     @PostMapping(path = "/subscribe-to-city", consumes = {MediaType.APPLICATION_JSON_VALUE})
-    @Operation(summary = "City subscription", security = {@SecurityRequirement(name = "bearer-key")})
+    @Operation(summary = "City subscription")
     public Mono<ResponseEntity<String>> subscribeToCity(@RequestBody SubscriptionRequestDTO subscriptionDTO) {
         return clientService.subscribeToCity(subscriptionDTO.getUserId(), subscriptionDTO.getCityId())
                 .map(v -> ResponseEntity.ok("Subscribed to city successfully"))
@@ -78,7 +77,6 @@ public class ClientController {
 
     @GetMapping(path = "/subscribed-cities/{userId}", produces = {MediaType.APPLICATION_JSON_VALUE})
     @Operation(summary = "Get the weather data for subscribed cities",
-            security = {@SecurityRequirement(name = "bearer-key")},
             responses = {
                     @ApiResponse(responseCode = "200",
                             description = "Successful operation",

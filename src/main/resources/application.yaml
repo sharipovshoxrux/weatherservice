@@ -1,19 +1,27 @@
 server:
   port: 8080
 
-jwt:
-  master-key: 2c3abca2-48ec-4bf5-8ea7-23a8a6e205d3
-  secret-key: 576E5A7234753778214125442A472D4B614E645267556B58703273357638792F423F4528482B4D6251655468566D597133743677397A24432646294A404E6352
-  expirationMs: 3600000 # 1 hour
-
 spring:
   main:
     allow-circular-references: true
   r2dbc:
-    url: r2dbc:postgresql://localhost:5432/mydatabase
+    url: r2dbc:postgresql://localhost:5432/mydatabase?schema=public
     username: myuser
     password: mypassword
     initialization-mode: always  # Change to 'never' for production
   liquibase:
     change-log: classpath:db/db-changelog.xml
     enabled: true
+
+
+application:
+  password:
+    encoder:
+      secretSaltKey: GRIT123
+      iteration: 16
+      keylength: 256
+  security:
+    jwt:
+      secretkey: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCjLUNP9MTQf/XOVjpmYckdcT2yePs9comR+rI3p5CHi2Sgm8Q8xa3fEwTBL+kaq908yjcO7oakmnOjOlpFrOay9No5728l97wR6FJh8Y/bmz/xxxkUWI/AcF3A11zv95hMUDp1quaWhyuEQUt6EXUThWog/Fx8zt9a4DIoS14UbCas5moIOq5+H5ydTa2xwdMCz//jXTbQrmXc7dV0DcQgClR1WYeOT37C571oFQZNtnDrOq27yeewji/GGWGHcDNuSbgorta6FbT+E/l4o7Dpxs5viHdUkHf+qXaOJZdcMbhWtVFGTuxBdf0q5XaatXKw1ZxB0a8PvE9u2OawmwwdAgMBAAECggEACkyakYrg+0oAUUg3AmxMndueacviC7RVg42/vuyIHk4JiWubfLx7Z3eTVsA35dOQMLyQshQTEoOfJd/Sf9BUdVooBf0bVlmnGLhBruXozxMi+5c1+YdHd32AJWJSfuDxT2vG7NNfH4QjloLqiSdd7OAAXVmgWs5R4bIB6HItW3uIOPudSo9tZGMGt4YaK12CEL53ixVqYaKRhDCe1N6LTZPsqL36Lza+pSXZHK+BbfVm155fCleXMVCfKeBy23o+Ydlq2jz16W+FULQ3lmHiF+OdMDJ2ZbYROn71Aq0FAuutum811Z7hPYnBa11ZlkTQ000dWaxYKG2FOXEKTpSZEQKBgQDU1Ur3Wh2WULis/peJS4d/IccLsQE0Cmdu7TwqR8vf+FnLo1qfoPWiD4oHz57PTL4Ga1qCAMQYB6MmspzDffKl6fFRzyjpmpM2eclKGaAEyECU4dZ6NUjjhYUyx6OrhFbw/D0FwXC9RM5IlZchZsZLImDkIma+rfVXfO7/zgyclQKBgQDERbdXr6W3Hg8UWPGitwMBBrkJ4qZu86TuqIOnTjXvqJ6KkuR0D5Ra5aaJGJATsui1cdhFLy2yJSOSUCFRZK0fWbeCYBhIQnsNVyxfb8HDWmL5ir8KknSbdnAjnciGIkNkK7ee7HSMmQP7r2f1HUIcEamP8IaFRI4Vf7a8bBvHaQKBgE+EBMcXFvjC3cxcLfdwjYX0862titqLjItH/PN68XOTENFhDYmYFE1g6tvyOM4QSOqTDzSE3r5vlAfwMVtkYdSU68D52bo1MwzmQUr6+ervehllqsDryXifuNz483AwOF8+jfnphJph64P4x4cGI82MYZC6PZK94Wy3U3+k1tdlAoGBAMMQvs0JJtu9piME2vJqjTPB6LloZx0yTSNcm6v10SklHpx+rUqkCT/lqgPrQ5YwY5OhV946q2G4A4hw1ww70MutsPKEat22JPH3R4R6X8q11FRKjuAE+ptftMfREvAssWmnAVGTk6oAkbLce6disseOzkTeOfPNVKENUyIlF96xAoGAa/oThIBf03X4CaknscBkefdLAhup047uVfDTvBKqKjQqqhd4fvckaBk7Tz4GagClAnz1yz1ayrDojLHePBwa+N90WKKQI3q1sQ7kcPotonAiJ3D0j+tnvVreWK6FNAQgeSwgNVEqcnG0jSrg8tEb67VpzEpTka5M/4O2vbr5hms=
+      expiration: 86400000 # 1 day
+      refresh-time: 604800000 # 7 days
